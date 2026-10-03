@@ -4,304 +4,100 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <meta name="description" content="Slug Anime and Manga Association at UC Santa Cruz hosts anime screenings, socials, games, and SlugCon.">
-    <meta name="theme-color" content="#fff4f8">
     <link rel="icon" href="favicon.ico" type="image/x-icon" />
     <link rel="stylesheet" type="text/css" href="styles.css" />
     <title>Slug Anime</title>
 </head>
 
 <body>
-    <div class="parallax-tree" aria-hidden="true">
-        <div class="tree-layer tree-trunk"></div>
-        <div class="tree-layer tree-top"></div>
-        <div class="tree-layer tree-middle"></div>
-        <div class="tree-layer tree-bottom"></div>
-    </div>
     <header>
-        <a class="mari" href="./" aria-label="Slug Anime home">
-            <img src="content/Mari.gif" alt="Mari mascot" width="96" height="96">
-        </a>
-        <div class="site-title">
-            <p class="eyebrow">UC Santa Cruz</p>
-            <h1>Slug Anime and Manga Association</h1>
+        <div class="mari">
+            <img src="content/Mari.gif" alt="Mari">
         </div>
+        <h1>Slug Anime and Manga Association</h1>
         <div class="social-icons">
-            <a href="discord" target="_blank" rel="noreferrer"><img src="content/discord.svg" alt="Discord" width="40" height="40"></a>
-            <a href="instagram" target="_blank" rel="noreferrer"><img src="content/instagram.svg" alt="Instagram" width="40" height="40"></a>
+            <a href="discord" target="_blank"><img src="content/discord.svg" alt="Discord"></a>
+            <a href="instagram" target="_blank"><img src="content/instagram.svg" alt="Instagram"></a>
         </div>
     </header>
-    <a href="slugcon2026" id="to-slugcon">
-        <img src="slugcon2026/assets/slugconMari.avif" alt="SlugCon 2026" width="250" height="363" loading="lazy" decoding="async" />
+    <a href="slugcon2025" id="to-slugcon">
+        <img src="slugcon2025/assets/slugconMari.avif" alt="mari" />
     </a>
-    <main class="content">
-        <section class="cover">
-            <div class="carousel-container" aria-label="Club event photos">
+    <div class="content">
+        <div class="cover">
+            <div class="carousel-container">
                 <div class="carousel" id="carousel"></div>
             </div>
-            <div class="bottom-left">
-                <div class="bottom-left-content">
-                    <p class="eyebrow">Anime club at UCSC</p>
-                    <h2>Screenings, games, art, and community every week.</h2>
-                    <p>The Slug Anime and Manga Association brings together anime and manga fans for socials, creative events, and SlugCon.</p>
-                    <div class="hero-actions">
-                        <a class="discord-link" href="discord" target="_blank" rel="noreferrer">Join Our Discord</a>
-                        <a class="secondary-link" href="slugcon2026">Explore SlugCon 2026</a>
-                    </div>
-                </div>
-            </div>
-        </section>
+            <script>
+                const imageFolder = "carousel/";  // Folder where images are stored
+                const imageFiles = ["image1.jpg", "image2.jpg"]; // List of images
+                const carousel = document.getElementById("carousel");
 
-        <section class="info-grid">
-            <article class="info-card">
-                <p class="eyebrow">General Meetings</p>
-                <h2>Weekly on Sundays</h2>
-                <p><strong>Time:</strong> 3:00 PM - 6:00 PM</p>
-                <p><strong>Location:</strong> varies! Check out Discord for current information.</p>
-                <p>Come by for screenings, games, and low-pressure hangouts with other fans.</p>
-            </article>
+                // Create image elements and append to carousel
+                imageFiles.forEach((image, index) => {
+                    let img = document.createElement("img");
+                    img.src = imageFolder + image;
+                    if (index === 0) img.classList.add("active"); // First image visible
+                    carousel.appendChild(img);
+                });
 
-            <article class="info-card accent-card">
-                <p class="eyebrow">What We Do</p>
-                <h2>Low-pressure events for anime, art, games, and meeting people.</h2>
-                <p>We run regular anime gatherings, social events, creative showcases, and larger community projects throughout the year.</p>
-                <ul class="feature-list">
-                    <li>Anime and manga meetups</li>
-                    <li>Art contests and club showcases</li>
-                    <li>Community convention planning</li>
-                </ul>
-            </article>
-        </section>
-
-        <section class="photo-band section-card">
-            <div class="section-heading">
-                <div>
-                    <p class="eyebrow">Fish Presents</p>
-                    <h2>SlugCon 2026</h2>
-                </div>
-                <a class="secondary-link" href="slugcon2026">See full event page</a>
-            </div>
-            <div class="photo-slices" id="photo-slices">
-                <figure class="photo-slice is-active" data-photo-slice tabindex="0" aria-label="Arcade energy photo">
-                    <img src="slugcon2026/assets/photos/dance-pad.webp" alt="Cosplayers using the dance pad setup at SlugCon 2026" loading="lazy" decoding="async">
-                    <figcaption>
-                        <span>Arcade energy</span>
-                    </figcaption>
-                </figure>
-                <figure class="photo-slice" data-photo-slice tabindex="0" aria-label="Cosplay showcase photo">
-                    <img src="slugcon2026/assets/photos/cosplay-lineup.webp" alt="Cosplayers lined up during a SlugCon 2026 event" loading="lazy" decoding="async">
-                    <figcaption>
-                        <span>Cosplay showcase</span>
-                    </figcaption>
-                </figure>
-                <figure class="photo-slice" data-photo-slice tabindex="0" aria-label="Student performances photo">
-                    <img src="slugcon2026/assets/photos/merch-booth.webp" alt="Students running the merch booth at SlugCon 2026" loading="lazy" decoding="async">
-                    <figcaption>
-                        <span>Student Performances</span>
-                    </figcaption>
-                </figure>
-                <figure class="photo-slice" data-photo-slice tabindex="0" aria-label="Prizes and cosplay photo">
-                    <img src="slugcon2026/assets/photos/cosplay-prizes.webp" alt="Cosplayers with prizes and snacks at SlugCon 2026" loading="lazy" decoding="async">
-                    <figcaption>
-                        <span>Prizes and cosplay</span>
-                    </figcaption>
-                </figure>
-                <figure class="photo-slice" data-photo-slice tabindex="0" aria-label="Live performances photo">
-                    <img src="slugcon2026/assets/photos/live-music.webp" alt="Live music performance during SlugCon 2026" loading="lazy" decoding="async">
-                    <figcaption>
-                        <span>Live performances</span>
-                    </figcaption>
-                </figure>
-                <figure class="photo-slice" data-photo-slice tabindex="0" aria-label="Raffle moments photo">
-                    <img src="slugcon2026/assets/photos/raffle-winner.webp" alt="SlugCon 2026 attendee showing a raffle prize" loading="lazy" decoding="async">
-                    <figcaption>
-                        <span>Raffle moments</span>
-                    </figcaption>
-                </figure>
-            </div>
-        </section>
-
-        <section class="calendar section-card">
-            <div class="section-heading">
-                <div>
-                    <p class="eyebrow">Calendar</p>
-                    <h2>Our Events</h2>
-                </div>
-            </div>
-            <p>Check upcoming meetings, socials, and special events.</p>
-            <iframe
-                src="https://calendar.google.com/calendar/embed?src=c_c41242c3e02c962dbda4d12d5f7cbe372f0d8ed768c6f99d3ee7aa6aec780d26%40group.calendar.google.com&ctz=America%2FLos_Angeles"
-                title="Slug Anime events calendar"
-                loading="lazy"
-                referrerpolicy="no-referrer-when-downgrade"
-                style="border: 0"
-                width="100%"
-                height="400"
-                frameborder="0"
-                scrolling="no"></iframe>
-        </section>
-
-        <script>
-            const imageFiles = [
-                "slugcon2026/assets/photos/maid-cafe-group.webp",
-                "slugcon2026/assets/photos/cosplay-audience.webp",
-                "slugcon2026/assets/photos/panel-presentation.webp",
-                "slugcon2026/assets/photos/group-photo.webp"
-            ];
-            const carousel = document.getElementById("carousel");
-            const prefersReducedMotion = window.matchMedia("(prefers-reduced-motion: reduce)").matches;
-
-            imageFiles.forEach((image, index) => {
-                const img = document.createElement("img");
-                img.src = image;
-                img.alt = "Scenes from Slug Anime events";
-                img.decoding = "async";
-                img.loading = index === 0 ? "eager" : "lazy";
-                if (index === 0) {
-                    img.classList.add("active");
-                }
-                carousel.appendChild(img);
-            });
-
-            if (!prefersReducedMotion && imageFiles.length > 1) {
                 let currentIndex = 0;
                 const images = document.querySelectorAll(".carousel img");
 
-                window.setInterval(() => {
-                    images[currentIndex].classList.remove("active");
-                    currentIndex = (currentIndex + 1) % images.length;
-                    images[currentIndex].classList.add("active");
-                }, 7000);
-            }
+                function nextImage() {
+                    images[currentIndex].classList.remove("active"); // Hide current image
+                    currentIndex = (currentIndex + 1) % images.length; // Move to next image
+                    images[currentIndex].classList.add("active"); // Show next image
+                }
 
-            const photoSlices = Array.from(document.querySelectorAll("[data-photo-slice]"));
-            const photoSlicesContainer = document.getElementById("photo-slices");
-            const mobileMedia = window.matchMedia("(max-width: 768px)");
-            const root = document.documentElement;
-            let activePhotoIndex = 0;
-            let photoIntervalId = null;
-            let mobileScrollAttached = false;
-            let parallaxTicking = false;
-            let mobileGalleryTicking = false;
+                setInterval(nextImage, 7000); // Change image every 7 seconds
+            </script>
+            <div class="bottom-left">
+                <div class="bottom-left-content">
+                    <p>The Slug Anime and Manga Association (SAMA) at UC Santa Cruz is a community of anime and manga
+                        enthusiasts.</p>
+                    <p>We host screenings, games, and fun events for fans to connect and share their passion.</p>
+                    <a class="discord-link" href="discord" target="_blank">Join Our Discord</a>
+                </div>
+            </div>
+        </div>
 
-            function setActivePhoto(index) {
-                activePhotoIndex = index;
-                photoSlices.forEach((slice, sliceIndex) => {
-                    slice.classList.toggle("is-active", sliceIndex === index);
-                });
-            }
+        <h2>General Meeting Times</h2>
+        <p><strong>Time:</strong> 3:00 PM - 6:00 PM</p>
+        <p><strong>Day:</strong> Every Sunday During the Quarter</p>
+        <p><strong>Location:</strong> Social Sciences 2 room 159</p>
 
-            function stopPhotoRotation() {
-                if (photoIntervalId) {
-                    window.clearInterval(photoIntervalId);
-                    photoIntervalId = null;
+        <div id="after">
+            <h2>Upcoming Event: Winter Art Festival</h2>
+            <p>Join us for our annual Winter Art Festival, where artists from our club will be showcasing their work!
+                Boba
+                will also be available for sale.</p>
+            <p><strong>Location:</strong> Porter Hitchcock Lounge</p>
+            <p><strong>Day:</strong> March 1, 2025</p>
+            <p><strong>Time:</strong> 1:00 PM - 5:00 PM</p>
+        </div>
+        <script>
+            function hideDivIfAfter() {
+                const today = new Date();
+                if (today.getMonth() > 2 || (today.getMonth() === 2 && today.getDate() > 1)) {
+                    document.getElementById("after").style.display = "none";
                 }
             }
 
-            function updateMobileGallery() {
-                mobileGalleryTicking = false;
-                if (!mobileMedia.matches || photoSlices.length === 0) {
-                    return;
-                }
-
-                const rect = photoSlicesContainer.getBoundingClientRect();
-                const viewportAnchor = window.innerHeight * 0.45;
-                const travel = Math.max(rect.height + window.innerHeight * 0.2, 1);
-                const progress = Math.min(Math.max((viewportAnchor - rect.top) / travel, 0), 0.9999);
-                const nextIndex = Math.min(Math.floor(progress * photoSlices.length), photoSlices.length - 1);
-
-                if (nextIndex !== activePhotoIndex) {
-                    setActivePhoto(nextIndex);
-                }
-            }
-
-            function requestMobileGalleryUpdate() {
-                if (!mobileGalleryTicking) {
-                    mobileGalleryTicking = true;
-                    window.requestAnimationFrame(updateMobileGallery);
-                }
-            }
-
-            function startPhotoRotation() {
-                stopPhotoRotation();
-                if (prefersReducedMotion || mobileMedia.matches || photoSlices.length < 2) {
-                    return;
-                }
-                photoIntervalId = window.setInterval(() => {
-                    setActivePhoto((activePhotoIndex + 1) % photoSlices.length);
-                }, 3200);
-            }
-
-            photoSlices.forEach((slice, index) => {
-                const activate = () => {
-                    setActivePhoto(index);
-                    startPhotoRotation();
-                };
-
-                slice.addEventListener("mouseenter", () => {
-                    stopPhotoRotation();
-                    setActivePhoto(index);
-                });
-                slice.addEventListener("focus", activate);
-                slice.addEventListener("click", activate);
-                slice.addEventListener("touchstart", () => {
-                    setActivePhoto(index);
-                }, { passive: true });
-            });
-
-            photoSlicesContainer.addEventListener("mouseleave", startPhotoRotation);
-
-            function updateTreeParallax() {
-                parallaxTicking = false;
-                if (prefersReducedMotion) {
-                    root.style.setProperty("--treeTrunkOffset", "0px");
-                    root.style.setProperty("--treeTopOffset", "0px");
-                    root.style.setProperty("--treeMiddleOffset", "0px");
-                    root.style.setProperty("--treeBottomOffset", "0px");
-                    return;
-                }
-
-                const maxScroll = Math.max(root.scrollHeight - window.innerHeight, 1);
-                const progress = Math.min(window.scrollY / maxScroll, 1);
-                root.style.setProperty("--treeTrunkOffset", `${progress * 18}px`);
-                root.style.setProperty("--treeTopOffset", `${progress * 34}px`);
-                root.style.setProperty("--treeMiddleOffset", `${progress * 52}px`);
-                root.style.setProperty("--treeBottomOffset", `${progress * 70}px`);
-            }
-
-            function requestParallaxUpdate() {
-                if (!parallaxTicking) {
-                    parallaxTicking = true;
-                    window.requestAnimationFrame(updateTreeParallax);
-                }
-            }
-
-            function syncPhotoMode() {
-                if (mobileMedia.matches) {
-                    stopPhotoRotation();
-                    if (!mobileScrollAttached) {
-                        window.addEventListener("scroll", requestMobileGalleryUpdate, { passive: true });
-                        window.addEventListener("resize", requestMobileGalleryUpdate, { passive: true });
-                        mobileScrollAttached = true;
-                    }
-                    requestMobileGalleryUpdate();
-                    return;
-                }
-
-                startPhotoRotation();
-            }
-
-            setActivePhoto(0);
-            syncPhotoMode();
-            requestParallaxUpdate();
-            mobileMedia.addEventListener("change", syncPhotoMode);
-            window.addEventListener("scroll", requestParallaxUpdate, { passive: true });
-            window.addEventListener("resize", requestParallaxUpdate, { passive: true });
+            // Run the function when the script loads
+            hideDivIfAfter();
         </script>
-    </main>
+
+        <div class="calendar">
+            <h2>Our Events</h2>
+            <iframe
+                src="https://calendar.google.com/calendar/embed?src=c_c41242c3e02c962dbda4d12d5f7cbe372f0d8ed768c6f99d3ee7aa6aec780d26%40group.calendar.google.com&ctz=America%2FLos_Angeles"
+                style="border: 0" width="100%" height="400" frameborder="0" scrolling="no"></iframe>
+        </div>
+    </div>
     <footer>
         <div>
-            <img src="content/slugheart.png" alt="Slug Heart" width="69" height="69" loading="lazy" decoding="async">
+            <img src="content/slugheart.png" alt="Slug Heart">
         </div>
         <div>
             <p>Inquiries? Contact <a href="mailto:sluganime@ucsc.edu">sluganime@ucsc.edu</a></p>

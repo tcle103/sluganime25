@@ -135,7 +135,7 @@ function openDetailedView(artist) {
 		a.href = artistInfo[artist].socials[social];
 		a.target = "_blank";
 		const icon = document.createElement("img");
-		icon.src = `../../content/socials/${social}.${imageFormat}`;
+		icon.src = `./socials/${social}.${imageFormat}`;
 		a.appendChild(icon);
 		socials.appendChild(a);
 	});
